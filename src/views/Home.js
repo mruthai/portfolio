@@ -1,23 +1,17 @@
 import React from 'react'
 import images from '../constants/images'
+import { Navbar } from '../components'
 
 const Home = () => {
     return (
         <div className="app__container">
-            <div className="app__content">
-                <div>
-                    <header>
-
-                <h1 className="app__h1-ubuntu"> The Ultimate Variable </h1>
-                    </header>
-
+            <Navbar />
+            <aside>
+                <div className="app__content-snapshot">
+                    < img className="headshot" src={images.headshot} alt="headshot" />
+                    <p className="p__ubuntu p__content-snapshot">Thanks for stopping by and seeing how I break things.</p>
                 </div>
-
-            </div>
-            <div className="app__content">
-            < img className="headshot" src={images.headshot} alt="headshot" />
-            <p className="p__ubuntu">Things I break by Martin Ruthaivilavan</p>
-            </div>
+            </aside>
 
         </div>
     )

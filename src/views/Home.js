@@ -1,13 +1,14 @@
 import React from 'react'
-import images from '../constants/images'
-import { Navbar } from '../components'
+import  Navbar  from '../components/Navbar/Navbar'
+import HeadingOne from '../components/Heading/HeadingOne'
 
 const Home = () => {
+
     return (
-        <div className="app__container">
+        <div className="  dark:text-slate-200 text-gray-900 bg:slate-100 dark:bg-gray-900">
             <Navbar />
                 <div className="">
-                    <p className="p__ubuntu p__content-snapshot">Thanks for stopping by and seeing how I break things.</p>
+                    <HeadingOne />
                 </div>
         </div>
     )

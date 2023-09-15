@@ -1,8 +1,9 @@
 import React from 'react'
+import Theme from '../Theme/Theme'
 
 const Navbar = () => {
     return (
-        <nav className="flex flex-row justify-evenly items-center h-20 bg-gray-400">
+        <nav className="flex flex-row justify-evenly items-center h-20 dark:bg-gray-900 bg-slate-200  dark:text-slate-200 text-gray-900">
                 <div className="">
                     <h1 className="font-sans "> The Ultimate Variable </h1>
                 </div>
@@ -11,8 +12,10 @@ const Navbar = () => {
                     <li className=""> <a href="/#projects" alt="projects">0.2 Projects</a> </li>
                     <li className=""> <a href="/#about" alt="about">0.3 About</a> </li>
                     <li className=""> <a href="/#contact" alt="contact">0.4 Contact</a> </li>
-
                 </ul >
+               <div>
+                <Theme />
+               </div>
         </nav>
     )
 }

@@ -6,13 +6,9 @@ const Home = () => {
     return (
         <div className="app__container">
             <Navbar />
-            <aside>
-                <div className="app__content-snapshot">
-                    < img className="headshot" src={images.headshot} alt="headshot" />
+                <div className="">
                     <p className="p__ubuntu p__content-snapshot">Thanks for stopping by and seeing how I break things.</p>
                 </div>
-            </aside>
-
         </div>
     )
 }

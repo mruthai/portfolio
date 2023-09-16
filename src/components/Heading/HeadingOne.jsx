@@ -1,12 +1,11 @@
 import React from 'react'
 
-const HeadingOne = () => {
+const HeadingOne = ({pOne, pTwo, pThree}) => {
   return (
-    <div className="dark:bg-gray-900 dark:text-slate-200 bg-slate-200 text-gray-900">
-      <h1 className="">Hi, I'm</h1>
-      <p>Martin</p>
-      <p>I'm also a</p>
-
+    <div>
+      <p >{pOne}</p>
+      <p>{pTwo}</p>
+      <p>{pThree}</p>
     </div>
   )
 }

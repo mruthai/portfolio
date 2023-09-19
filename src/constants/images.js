@@ -1,6 +1,9 @@
-import headshot from '../assets/headshot.png'
+import headshot from '../assets/headshot.png';
+import headshotTwo from '../assets/headshotTwo.svg';
 
-
-export default {
+const defaultExport = {
     headshot,
-}
+    headshotTwo
+};
+
+export default defaultExport;

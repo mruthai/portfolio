@@ -7,9 +7,11 @@ import HeadingOne from '../components/Heading/HeadingOne'
 import images from '../constants/images'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
 
+
 const Home = () => {
 
     return (
+
         <div className=" mx-auto min-h-screen max-w-screen-xl dark:text-slate-100 text-gray-900 bg-slate-100 dark:bg-gray-900">
             <Navbar />
             <div className=" my-20">
@@ -19,7 +21,7 @@ const Home = () => {
                         titleOne="Martin Ruthaivilavan"
                         tagOne="Collaboration-Focused Full Stack Developer"
                         headingOneTag="text-xl font-medium mb-3"
-                        tagTwo="I create web products and digital experiences that prioritize accessibility and inclusivity"
+                        tagTwo="I create web products and digital experiences that are inclusive and mission-oriented"
                         headingTwoTag="text-slate-500 mb-10"
                     />
                 </div>
@@ -49,13 +51,13 @@ const Home = () => {
                         "I spend time trying to explore the world with my family when I'm not at my computer or on the pitch."
                     ]}
                 />
-                <img className="object-contain md:h-80 md:w-80 h-40 w-40 rounded-md dark:bg-slate-100 text-slate-100 md:transform md:scale-x-[-1] " src={images.headshotTwo} alt="headshot" />
+                <img className="object-contain md:h-80 md:w-80 h-40 w-40 md:transform md:scale-x-[-1] " src={images.headshotTwo} alt="headshot" />
             </div>
             <div className=" mx-10 my-10 ">
-
                 <Footer />
             </div>
         </div>
+
     )
 }
 

@@ -1,11 +1,11 @@
 import React from 'react'
 
-const HeadingOne = ({pOne, pTwo, pThree}) => {
+const HeadingOne = ({headingOneTitle, headingOneTag, headingTwoTag, titleOne, tagOne, tagTwo}) => {
   return (
     <div>
-      <p >{pOne}</p>
-      <p>{pTwo}</p>
-      <p>{pThree}</p>
+      <h1 className={`${headingOneTitle}`}>{titleOne}</h1>
+      <p className={`${headingOneTag}`}>{tagOne}</p>
+      <p className={`${headingTwoTag}`}>{tagTwo}</p>
     </div>
   )
 }

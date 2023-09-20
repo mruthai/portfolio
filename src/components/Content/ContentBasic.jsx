@@ -1,9 +1,8 @@
 import React from 'react'
 
-const ContentBasic = ({ classContentBasicCss, contentTitle, contentParagraph, classParagraphContent, classHeadingContent}) => {
+const ContentBasic = ({ classContentBasicCss, contentParagraph, classParagraphContent }) => {
   return (
     <div className={`${classContentBasicCss}`}>
-      <h1 className={`${classHeadingContent}`}>{contentTitle}</h1>
       {contentParagraph.map((paragraph, index) => (
       <p key={index} className={`${classParagraphContent} mb-4`}>
         {paragraph}

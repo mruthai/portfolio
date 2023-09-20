@@ -11,11 +11,10 @@ const Navbar = () => {
 
   return (
     <div className="relative">
-      <nav className="flex flex-row justify-between items-center h-20 md:px-10 px-5">
-        <Theme />
-        <div>
+      <nav className="flex flex-row justify-center items-center gap-20 h-20 md:px-10 px-5">
+        {/* <div>
           <h1 className="font-sans">The Ultimate Variable</h1>
-        </div>
+        </div> */}
 
         {/* Hamburger menu icon or Close icon based on isMenuOpen */}
         <div className="md:hidden">
@@ -49,13 +48,14 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+      <Theme />
       </nav>
 
       {/* Full-screen menu overlay */}
       {isMenuOpen && (
         <div
-          className="relative inset-0 md:h-auto flex justify-center items-center dark:bg-gray-900 dark:text-slate-100 bg-slate-100 text-gray-900 z-0 md:z-50"
-          onClick={toggleMenu}
+        className="relative inset-0 md:h-auto flex justify-center items-center dark:bg-gray-900 dark:text-slate-100 bg-slate-100 text-gray-900 z-0 md:z-50"
+        onClick={toggleMenu}
         >
           {/* Navigation links for small screens */}
           <ul className="md:hidden flex flex-col gap-5 font-body">

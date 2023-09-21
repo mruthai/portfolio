@@ -1,14 +1,49 @@
-import React from 'react'
-import Navbar from '../components/Navbar/Navbar'
-import WordTyper from '../components/Theme/WordTyper'
-import ContentBasic from '../components/Content/ContentBasic'
-import Footer from '../components/Footer/Footer'
-import HeadingOne from '../components/Heading/HeadingOne'
-import images from '../constants/images'
-import { BsGithub, BsLinkedin } from 'react-icons/bs'
+import React from 'react';
+import Navbar from '../components/Navbar/Navbar';
+import WordTyper from '../components/Theme/WordTyper';
+import ContentBasic from '../components/Content/ContentBasic';
+import Footer from '../components/Footer/Footer';
+import HeadingOne from '../components/Heading/HeadingOne';
+import images from '../constants/images';
+import { BsGithub, BsLinkedin } from 'react-icons/bs';
+import { FaSquareXTwitter } from 'react-icons/fa6';
+import CardCarousel from '../components/Card/CardCarousel';
 
 
 const Home = () => {
+    
+    const cardsData = [
+        {
+            year: '2020 - Present',
+            title:'Full-stack Software Developer',
+            description: 'lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip',
+            tools: ['React', 'Flask', 'Django', 'JavaScript', 'Python' ],
+        },
+        {
+            year: '2021 - 2022',
+            title:'Learning Facilitator • Synthesis',
+            description: 'This is the card description',
+            tools: ['Slack', 'Retool', 'GSuite' ],
+        },
+        {
+            year: '2018 - 2020',
+            title:'Co-Creator • VMR-Services',
+            description: 'This is the card description',
+            tools: ['items 1', 'items 2', 'items 3' ],
+        },
+        {
+            year: '2017 - 2020',
+            title:'Technology Design Teacher • Ruamrudee International School',
+            description: 'This is the card description',
+            tools: ['items 1', 'items 2', 'items 3' ],
+        },
+        {
+            year: '2012 - 2017',
+            title:'Learning Innovation Coach • Shekou International School',
+            description: 'This is the card description',
+            tools: ['items 1', 'items 2', 'items 3' ],
+        },
+    ]
 
     return (
 
@@ -22,15 +57,18 @@ const Home = () => {
                         tagOne="Collaboration-Focused Full Stack Developer"
                         headingOneTag="text-xl font-medium mb-3"
                         tagTwo="I create web products and digital experiences that are inclusive and mission-oriented"
-                        headingTwoTag="text-slate-500 mb-10"
+                        headingTwoTag="text-slate-500 mb-7"
                     />
                 </div>
-                <div className="flex flex-row gap-8">
-                    <a href="https://github.com/mruthai" className="text-slate-500"> <BsGithub size={24} /></a>
-                    <a href="https://www.linkedin.com/in/martin-ruthaivilavan/" className="text-slate-500"> <BsLinkedin size={24} /> </a>
+                <div className="flex flex-row items-center gap-8">
+                    <a href="https://github.com/mruthai" target="_blank" rel="noreferrer" className="text-slate-500 dark:hover:text-slate-200 hover:text-gray-900"> <BsGithub size={24} /></a>
+                    <a href="https://www.linkedin.com/in/martin-ruthaivilavan/" className="text-slate-500  dark:hover:text-slate-200 hover:text-gray-900"> <BsLinkedin size={24} /> </a>
+                    <a href="https://twitter.com/mmruthai" className="text-slate-500  dark:hover:text-slate-200 hover:text-gray-900"> <FaSquareXTwitter size={28} /> </a>
                 </div>
             </div>
-
+            <div>
+                <CardCarousel cardsData={cardsData} />
+            </div>
 
             <div id='about' className=" text-2xl flex md:flex-row flex-col gap-2 mb-7">
                 <h1 className="">I'm a</h1>
@@ -44,11 +82,10 @@ const Home = () => {
                     contentTitle='About'
                     classParagraphContent='leading-loose text-lg'
                     contentParagraph={[
-                        "In 2020, I embarked on a significant shift, moving away from my role in international technology education towards a newfound focus on solving meaningful problems beyond the classroom.",
-                        "As a software developer with a background in international technology education, I discovered a deep-seated passion for collaborative problem-solving. This led me to engage with diverse teams, each project presenting a unique challenge waiting to be conquered.",
-                        "Beyond my software development pursuits, I have a second passion: coaching on the football (soccer) field. Here, I mentor young individuals, not only in the sport but also in the essential art of collaborative problem-solving. As a tech problem solver and a mentor, this dual role enables me to marry my love for connecting with people with my unwavering commitment to positively impacting the world.",
-                        "My transition from teaching in 2020 has allowed me to redirect my energy and skills toward innovative problem-solving and creating a meaningful difference in the lives of those I interact with.",
-                        "I spend time trying to explore the world with my family when I'm not at my computer or on the pitch."
+                        "In 2020, I transitioned from international technology education to digital problem-solving as a software developer. With a teaching background, I excelled in diverse team projects, collaboration, and empathy.",
+                        "During this transformation, I led the creation of a K-12 self-directed program involving schools, parents, teachers, and administrators. It culminated in an interactive guidebook accessible via Apple Books. The book showcased my unwavering commitment to education and adaptability in tech and learning.",
+                        "Simultaneously, I designed an innovative maker space to foster hands-on learning and creativity. It empowered students to explore and brought ideas to life. I also channeled my soccer coaching passion, emphasizing its skill-building potential.",
+                        "Beyond the computer, I have guided fellow soccer coaches, emphasizing the sport's skill development aspect. My family and I explored new places and supported each other off the field. Balancing professional and personal passions embodied my holistic approach to life—always seeking growth, learning, and sharing meaningful experiences.",
                     ]}
                 />
                 <img className="object-contain md:h-80 md:w-80 h-40 w-40 md:transform md:scale-x-[-1] " src={images.headshotTwo} alt="headshot" />
@@ -61,4 +98,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Home;

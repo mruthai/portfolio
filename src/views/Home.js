@@ -7,17 +7,18 @@ import HeadingOne from '../components/Heading/HeadingOne';
 import images from '../constants/images';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import { FaSquareXTwitter } from 'react-icons/fa6';
-import CardCarousel from '../components/Card/CardCarousel';
+import CardCarousel from '../components/Experience/CardCarousel';
+import ProjectCard from '../components/Projects/ProjectCard';
 
 
 const Home = () => {
 
-    const cardsData = [
+    const experienceData = [
         {
             year: '2020 - Present',
             title: 'Full-stack Software Developer',
             description: 'I led website development for budget-constrained clients, launching real estate sites with 30% more engagement and 20% lower bounce rates. Collaborated on a CSS/HTML CRM demo, built a hub for 400+ users, and managed resources for timely delivery. Used DBeaver/PostgreSQL for data relationships and scripted a Python rental ROI calculator. Managed API queries with ElephantSQL for statistical insights, all while ensuring responsive, scalable websites for improved user experiences.',
-            tools: ['React', 'Flask', 'Django', 'JavaScript', 'Python', 'Git', 'Github', 'Node.js'],
+            tools: ['React', 'Flask', 'Django', 'JavaScript', 'Python', 'Git', 'Github', 'Node.js', 'Wix'],
         },
         {
             year: '2021 - 2023',
@@ -43,7 +44,24 @@ const Home = () => {
             description: 'I took the lead in developing and implementing a transformative student-directed learning program spanning K-12, culminating in the creation of the "AMPed Guidebook." Furthermore, I fostered a culture of knowledge sharing among staff via Twitter, generating a remarkable 14 million impressions through #sisrocks, which directly contributed to a 200% surge in international teacher recruitment. Additionally, I co-authored a groundbreaking book, "Transform," that disseminates cutting-edge teaching and learning practices, further contributing to educational advancement and innovation.',
             tools: ['Apple Suite', 'WordPress', 'MakerBot 3D Printing'],
         },
-    ]
+    ];
+    const projectData = [
+        {
+            title: 'Decision Harvest',
+            description: 'This is the first card.',
+            imageUrl: 'https://example.com/image1.jpg',
+          },
+          {
+            title: 'Football Club',
+            description: 'This is the second card.',
+            imageUrl: 'https://example.com/image2.jpg',
+          },
+          {
+            title: 'Portfolio ',
+            description: 'This is the third card.',
+            imageUrl: 'https://example.com/image3.jpg',
+          },
+    ];
 
     return (
 
@@ -67,7 +85,21 @@ const Home = () => {
             </div>
 
             <div className="h-auto">
-                <CardCarousel cardsData={cardsData} />
+                <CardCarousel cardsData={experienceData} />
+            </div>
+            <div className="h-96">
+                {projectData.map((card, index) => (
+                    <ProjectCard
+                        key={index}
+                        title={card.title}
+                        description={card.description}
+                        imageUrl={card.imageUrl}
+                        projectContainer="flex flex-row gap-5"
+                        projectImageCss=""
+                        projectTitle=""
+                        projectDescription=""
+                    />
+                ))}
             </div>
             <div className="h-auto py-10 ">
                 <div id='about' className=" text-2xl flex md:mx-0 mx-5 md:flex-row gap-2 mb-7">
@@ -88,7 +120,7 @@ const Home = () => {
                             "Beyond the computer, I have guided fellow soccer coaches, emphasizing the sport's skill development aspect. My family and I explored new places and supported each other off the field. Balancing professional and personal passions embodied my holistic approach to life—always seeking growth, learning, and sharing meaningful experiences.",
                         ]}
                     />
-                    <img className="object-contain md:h-80 md:w-80 h-40 w-40 md:transform md:scale-x-[-1] " src={images.headshotTwo} alt="headshot" />
+                    <img className=" object-contain md:h-80 md:w-80 h-40 w-40 md:transform md:scale-x-[-1] " src={images.headshotTwo} alt="headshot" />
                 </div>
             </div>
             <div className=" mx-10 my-10 ">

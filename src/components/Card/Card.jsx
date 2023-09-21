@@ -1,22 +1,21 @@
 import React from 'react';
 
-const Card = ({ year, title, description, tools }) => {
+const Card = ({cardContents, cardYearDiv, cardTitleDiv, cardTitle, cardDescription, cardUl, cardTools, cardYear, year, title, description, tools }) => {
   return (
-    <div className="flex flex-row">
-        <div className=" w-1/5 items-start">
-        <p className="pt-1 text-sm text-slate-500">{year}</p>
-        </div>
-        <div className="w-3/5">
-      <h2 className="font-bold text-lg">{title}</h2>
+    <div className={`${cardContents}`}>
+      <div className={`${cardYearDiv}`}>
+        <p className={`${cardYear}`}>{year}</p>
+      </div>
+      <div className={`${cardTitleDiv}`}>
+        <h2 className={`${cardTitle}`}>{title}</h2>
 
-      <p className="mt-2">{description}</p>
-      <ul className="flex flex-row gap-4">
-        {tools.map((item, index) => (
-          <li key={index} className="my-3 text-sm ">{item}</li>
-        ))}
-      </ul>
-        </div>
-
+        <p className={`${cardDescription}`}>{description}</p>
+        <ul className={`${cardUl}`}>
+          {tools.map((item, index) => (
+            <li key={index} className={`${cardTools}`}>{item}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

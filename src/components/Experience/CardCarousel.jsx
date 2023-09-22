@@ -1,5 +1,7 @@
+//Experience card with buttons for the user to cycle through different experiences. 
+
 import React, { useState } from 'react';
-import Card from './Card'; // Adjust the import path as needed
+import Card from './Card'; 
 
 const CardCarousel = ({ cardsData }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -13,10 +15,11 @@ const CardCarousel = ({ cardsData }) => {
       prevIndex === 0 ? cardsData.length - 1 : prevIndex - 1
     );
   };
+//  Used props on for css and display properties from Card.jsx module- able to code css of the entire card.
 
   return (
     <div className="mb-20 py-10 ">
-      <h1 id="experience" className="font-bold text-2xl md:mx-0 mx-5">Journey</h1>
+      <h1 id="experience" className="font-bold my-10 text-2xl md:mx-0 mx-5">Journey</h1>
       <Card
         cardContents="md:flex md:flex-row"
         cardYearDiv=" md:w-48 md:my-0 my-5 md:mx-0 mx-5 items-start"

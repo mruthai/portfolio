@@ -16,7 +16,8 @@ const WordTyper = ({ classWordTyperContainer, classWordTyper }) => {
 
     return () => clearInterval(interval);
   }, [currentWordIndex, initialWords]);
-
+//  Used props on for css and display properties
+// Advantage of using props for both allows programmer to write content and style in single module
   return (
     <div className={`${classWordTyperContainer}`}>
       <p className={`${classWordTyper}`}>{currentWord}.</p>

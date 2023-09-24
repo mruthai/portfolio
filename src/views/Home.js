@@ -51,16 +51,22 @@ const Home = () => {
             title: 'Decision Harvest',
             description: 'Built a full-stack decision app for farmers using React, integrated real-time stock data, managed user info in Firestore, and deployed it on Netlify.',
             imageUrl: `${images.decisionHarvest}`,
+            projectTools: ['React', 'JavaScript', 'Firebase', 'Netlify'],
+            projectUrl: 'https://decision-harvest.netlify.app/'
         },
         {
             title: 'Football Club',
             description: 'Local soccer club needed a way to pass down the knowledge they have captured over the years. This web application showcases programs, competition dynamics, and scheduling. The site has over 400 views, allowing the club to be more transparent in its development process.',
             imageUrl: `${images.soccerClub}`,
+            projectTools: ['React', 'JavaScript', 'Node.Js'],
+            projectUrl: 'https://osusc.netlify.app/'
         },
         {
             title: 'Sustainable Fishing',
             description: 'I built an app for users to learn more about the seafood profiles of each species. The app allows users to collect fish cards to store on their profile and understand more about sustainable fishing.',
             imageUrl: `${images.fishing}`,
+            projectTools: ['Flask', 'Python', 'Glitch', 'PostgreSQL', 'ElephantSQL' ],
+            projectUrl: 'https://spangle-field-atlasaurus.glitch.me/'
         },
     ];
 
@@ -80,8 +86,8 @@ const Home = () => {
                 />
                 <div className="flex flex-row md:mt-0 mt-5 items-start gap-8">
                     <a href="https://github.com/mruthai" target="_blank" rel="noreferrer" className="text-slate-500 dark:hover:text-slate-200 hover:text-gray-900"> <BsGithub size={24} /></a>
-                    <a href="https://www.linkedin.com/in/martin-ruthaivilavan/" className="text-slate-500  dark:hover:text-slate-200 hover:text-gray-900"> <BsLinkedin size={24} /> </a>
-                    <a href="https://twitter.com/mmruthai" className="text-slate-500  dark:hover:text-slate-200 hover:text-gray-900"> <FaSquareXTwitter size={28} /> </a>
+                    <a href="https://www.linkedin.com/in/martin-ruthaivilavan/" target="_blank" rel="noreferrer" className="text-slate-500  dark:hover:text-slate-200 hover:text-gray-900"> <BsLinkedin size={24} /> </a>
+                    <a href="https://twitter.com/mmruthai" target="_blank" rel="noreferrer" className="text-slate-500  dark:hover:text-slate-200 hover:text-gray-900"> <FaSquareXTwitter size={28} /> </a>
                 </div>
             </div>
 
@@ -89,17 +95,25 @@ const Home = () => {
                 <CardCarousel cardsData={experienceData} />
             </div>
             <div className="h-auto md:mx-0 mx-5 space-y-14">
-                <h1 className="text-2xl font-bold">Projects</h1>
+                <h1 className="ml-5 text-2xl font-bold">Projects</h1>
                 {projectData.map((card, index) => (
                     <ProjectCard
                         key={index}
                         title={card.title}
                         description={card.description}
                         imageUrl={card.imageUrl}
-                        projectContainer="flex md:flex-row flex-col gap-10 "
-                        projectImageCss=" md:order-none order-3  md:w-72 md:h-40 w-32 h-20 rounded-md border-2 border-slate-300 dark:border-slate-800"
-                        projectTitle=" md:order-none order-1 text-xl font-bold"
+                        projectContainer="h-44 ml-5 flex md:flex-row flex-col items-center gap-16 transition-all ease-in duration-300 dark:hover:bg-gray-800 hover:bg-slate-50 rounded-lg"
+                        projectMiniContainerOne="m-4"
+                        projectMiniContainerTwo=""
+                        projectImageCss=" md:order-none order-3  md:w-72 md:h-40 w-32 h-20 rounded-md border-2 border-slate-300 dark:border-slate-700"
+                        projectTitle=" md:order-none order-1 text-lg font-bold"
                         projectDescription=" max-w-2xl md:order-none order-2"
+                        projectUl="md:mt-0 mt-5 md:flex md:flex-row flex flex-wrap md:gap-4 gap-2"
+                        projectToolCss="md:my-3 text-sm rounded-xl bg-gray-200 px-3 py-1 text-slate-500 "
+                        projectTools={card.projectTools}
+                        projectLink="text-slate-500"
+                        projectUrl={card.projectUrl}
+
                     />
                 ))}
             </div>

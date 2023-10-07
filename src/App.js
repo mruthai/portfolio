@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Home from './views/Home';
 import Projects from './views/Projects';
@@ -7,7 +6,7 @@ import Projects from './views/Projects';
 
 function App() {
   return (
-    <div className="relative dark:text-slate-100 text-gray-900 bg-slate-100 dark:bg-gray-900">
+    <div className="mx-auto min-h-screen max-w-screen-xl text-slate-100 dark:text-gray-900 dark:bg-slate-100 bg-gray-900">
       <Routes>
       
         <Route path="/" element={<Home />} />

@@ -49,7 +49,7 @@ const Home = () => {
     const projectData = [
         {
             title: 'Decision Harvest',
-            description: 'Built a full-stack decision app for farmers using React, integrated real-time stock data, managed user info in Firestore, and deployed it on Netlify.',
+            description: 'Built a full-stack decision app for farmers using React, integrated real-time stock data, managed user info in Firestore, and deployed the application using Netlify.',
             imageUrl: `${images.decisionHarvest}`,
             projectTools: ['React', 'JavaScript', 'Firebase', 'Netlify'],
             projectUrl: 'https://decision-harvest.netlify.app/'
@@ -72,7 +72,7 @@ const Home = () => {
 
     return (
 
-        <div className=" mx-auto min-h-screen max-w-screen-xl dark:text-slate-100 text-gray-900 bg-slate-100 dark:bg-gray-900">
+        <div className="dark:text-gray-900 dark:bg-slate-100 text-slate-100  bg-gray-900">
             <Navbar />
 
             <div className="md:p-0 p-5 md:h-[32rem] flex flex-col justify-center items-start"> {/* Add margin for spacing */}
@@ -85,16 +85,16 @@ const Home = () => {
                     headingTwoTag="text-slate-500 md:mb-7"
                 />
                 <div className="flex flex-row md:mt-0 mt-5 items-start gap-8">
-                    <a href="https://github.com/mruthai" target="_blank" rel="noreferrer" className="text-slate-500 dark:hover:text-slate-200 hover:text-gray-900"> <BsGithub size={24} /></a>
-                    <a href="https://www.linkedin.com/in/martin-ruthaivilavan/" target="_blank" rel="noreferrer" className="text-slate-500  dark:hover:text-slate-200 hover:text-gray-900"> <BsLinkedin size={24} /> </a>
-                    <a href="https://twitter.com/mmruthai" target="_blank" rel="noreferrer" className="text-slate-500  dark:hover:text-slate-200 hover:text-gray-900"> <FaSquareXTwitter size={28} /> </a>
+                    <a href="https://github.com/mruthai" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-slate-200 dark:hover:text-gray-900"> <BsGithub size={24} /></a>
+                    <a href="https://www.linkedin.com/in/martin-ruthaivilavan/" target="_blank" rel="noreferrer" className="text-slate-500  hover:text-slate-200 dark:hover:text-gray-900"> <BsLinkedin size={24} /> </a>
+                    <a href="https://twitter.com/mmruthai" target="_blank" rel="noreferrer" className="text-slate-500  hover:text-slate-200 dark:hover:text-gray-900"> <FaSquareXTwitter size={28} /> </a>
                 </div>
             </div>
 
-            <div className="h-auto">
+            <div id="experience" className="h-auto">
                 <CardCarousel cardsData={experienceData} />
             </div>
-            <div className="h-auto md:mx-0 mx-5 space-y-14">
+            <div id="projects" className="h-auto md:mx-0 mx-5 space-y-14">
                 <h1 className="ml-5 text-2xl font-bold">Projects</h1>
                 {projectData.map((card, index) => (
                     <ProjectCard
@@ -102,10 +102,10 @@ const Home = () => {
                         title={card.title}
                         description={card.description}
                         imageUrl={card.imageUrl}
-                        projectContainer="h-44 ml-5 flex md:flex-row flex-col items-center gap-16 transition-all ease-in duration-300 dark:hover:bg-gray-800 hover:bg-slate-50 rounded-lg"
+                        projectContainer="h-44 ml-5 flex md:flex-row flex-col items-center gap-16 "
                         projectMiniContainerOne="m-4"
-                        projectMiniContainerTwo=""
-                        projectImageCss=" md:order-none order-3  md:w-72 md:h-40 w-32 h-20 rounded-md border-2 border-slate-300 dark:border-slate-700"
+                        projectMiniContainerTwo="p-3 transition-all ease-in duration-300 hover:bg-gray-800 dark:hover:bg-slate-50 rounded-lg"
+                        projectImageCss=" md:order-none order-3  md:w-72 md:h-40 w-32 h-20 rounded-md border-2 dark:border-slate-300 border-slate-700"
                         projectTitle=" md:order-none order-1 text-lg font-bold"
                         projectDescription=" max-w-2xl md:order-none order-2"
                         projectUl="md:mt-0 mt-5 md:flex md:flex-row flex flex-wrap md:gap-4 gap-2"
@@ -139,7 +139,7 @@ const Home = () => {
                     <img className=" object-contain md:h-80 md:w-80 h-40 w-40 md:transform md:scale-x-[-1] " src={images.headshotTwo} alt="headshot" />
                 </div>
             </div>
-            <div className=" mx-10 my-10 ">
+            <div className="h-auto">
                 <Footer />
             </div>
         </div>

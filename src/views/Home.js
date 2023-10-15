@@ -75,7 +75,7 @@ const Home = () => {
         <div className="dark:text-gray-900 dark:bg-slate-100 text-slate-100  bg-gray-900">
             <Navbar />
 
-            <div className="md:p-0 p-5 md:h-[32rem] flex flex-col justify-center items-start"> {/* Add margin for spacing */}
+            <div className="ml-5 md:p-0 p-5 md:h-[32rem] flex flex-col justify-center items-start"> {/* Add margin for spacing */}
                 <HeadingOne
                     headingOneTitle="md:text-6xl text-4xl font-extrabold mb-3"
                     titleOne="Martin Ruthaivilavan"

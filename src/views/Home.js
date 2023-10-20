@@ -65,32 +65,37 @@ const Home = () => {
             title: 'Sustainable Fishing',
             description: 'I built an app for users to learn more about the seafood profiles of each species. The app allows users to collect fish cards to store on their profile and understand more about sustainable fishing.',
             imageUrl: `${images.fishing}`,
-            projectTools: ['Flask', 'Python', 'Glitch', 'PostgreSQL', 'ElephantSQL' ],
+            projectTools: ['Flask', 'Python', 'Glitch', 'PostgreSQL', 'ElephantSQL'],
             projectUrl: 'https://spangle-field-atlasaurus.glitch.me/'
         },
     ];
+
+    /* returning all the components  */
 
     return (
 
         <div className="dark:text-gray-900 dark:bg-slate-100 text-slate-100  bg-gray-900">
             <Navbar />
-
-            <div className="ml-5 md:p-0 p-5 md:h-[32rem] flex flex-col justify-center items-start"> {/* Add margin for spacing */}
-                <HeadingOne
-                    headingOneTitle="md:text-6xl text-4xl font-extrabold mb-3"
-                    titleOne="Martin Ruthaivilavan"
-                    tagOne="Collaboration-Focused Full Stack Developer"
-                    headingOneTag="text-xl font-medium mb-3"
-                    tagTwo="I create web products and digital experiences that are inclusive and mission-oriented"
-                    headingTwoTag="text-slate-500 md:mb-7"
-                />
-                <div className="flex flex-row md:mt-0 mt-5 items-start gap-8">
-                    <a href="https://github.com/mruthai" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-slate-200 dark:hover:text-gray-900"> <BsGithub size={24} /></a>
-                    <a href="https://www.linkedin.com/in/martin-ruthaivilavan/" target="_blank" rel="noreferrer" className="text-slate-500  hover:text-slate-200 dark:hover:text-gray-900"> <BsLinkedin size={24} /> </a>
-                    <a href="https://twitter.com/mmruthai" target="_blank" rel="noreferrer" className="text-slate-500  hover:text-slate-200 dark:hover:text-gray-900"> <FaSquareXTwitter size={28} /> </a>
+            <div className="flex md:flex-row flex-col md:h-[32rem] md:gap-20 ">
+                <div className="flex justify-center items-center">
+                    <img className="md:h-40 md:w-40 h-20 w-20 rounded-lg md:-rotate-6 rotate-0" src={images.headshot} alt="headshot" />
+                </div>
+                <div className="md:ml-5 md:p-0 p-5  flex flex-col justify-center items-start">
+                    <HeadingOne
+                        headingOneTitle="md:text-6xl text-4xl font-extrabold mb-3"
+                        titleOne="Martin Ruthaivilavan"
+                        tagOne="Collaboration-Focused Full Stack Developer"
+                        headingOneTag="text-xl font-medium mb-3"
+                        tagTwo="I create web products and digital experiences that are inclusive and mission-oriented"
+                        headingTwoTag="text-slate-500 md:mb-7"
+                    />
+                    <div className="flex flex-row md:mt-0 mt-5 items-start gap-8">
+                        <a href="https://github.com/mruthai" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-slate-200 dark:hover:text-gray-900"> <BsGithub size={24} /></a>
+                        <a href="https://www.linkedin.com/in/martin-ruthaivilavan/" target="_blank" rel="noreferrer" className="text-slate-500  hover:text-slate-200 dark:hover:text-gray-900"> <BsLinkedin size={24} /> </a>
+                        <a href="https://twitter.com/mmruthai" target="_blank" rel="noreferrer" className="text-slate-500  hover:text-slate-200 dark:hover:text-gray-900"> <FaSquareXTwitter size={28} /> </a>
+                    </div>
                 </div>
             </div>
-
             <div id="experience" className="h-auto">
                 <CardCarousel cardsData={experienceData} />
             </div>
@@ -102,14 +107,14 @@ const Home = () => {
                         title={card.title}
                         description={card.description}
                         imageUrl={card.imageUrl}
-                        projectContainer="h-44 ml-5 flex md:flex-row flex-col items-center gap-16 "
-                        projectMiniContainerOne="m-4"
+                        projectContainer="md:h-44 md:ml-5 flex md:flex-row flex-col items-center md:gap-16 gap-12 "
+                        projectMiniContainerOne="flex md:flex-row flex-col md:m-4"
                         projectMiniContainerTwo="p-3 transition-all ease-in duration-300 hover:bg-gray-800 dark:hover:bg-slate-50 rounded-lg"
-                        projectImageCss=" md:order-none order-3  md:w-72 md:h-40 w-32 h-20 rounded-md border-2 dark:border-slate-300 border-slate-700"
+                        projectImageCss=" md:order-none order-3  md:w-72 md:h-40 w-42 h-40 rounded-md border-2 dark:border-slate-300 border-slate-700"
                         projectTitle=" md:order-none order-1 text-lg font-bold"
                         projectDescription=" max-w-2xl md:order-none order-2"
                         projectUl="md:mt-0 mt-5 md:flex md:flex-row flex flex-wrap md:gap-4 gap-2"
-                        projectToolCss="md:my-3 text-sm rounded-xl bg-gray-200 px-3 py-1 text-slate-500 "
+                        projectToolCss="md:my-3 md:mt-0 mt-2 md:mb-0 mb-2 text-sm rounded-xl bg-gray-200 px-3 py-1 text-slate-500 "
                         projectTools={card.projectTools}
                         projectLink="text-slate-500"
                         projectUrl={card.projectUrl}

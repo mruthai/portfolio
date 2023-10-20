@@ -18,13 +18,13 @@ const CardCarousel = ({ cardsData }) => {
 //  Used props on for css and display properties from Card.jsx module- able to code css of the entire card.
 
   return (
-    <div className="transition-all ease-in duration-300 hover:bg-gray-800 dark:hover:bg-slate-50 rounded-lg mb-20 py-10 mr-10 ">
-      <h1 className="font-bold mb-10 text-2xl pl-5 md:mx-0 mx-5">Journey</h1>
+    <div className="transition-all ease-in duration-300 md:hover:bg-gray-800 md:dark:hover:bg-slate-50 rounded-lg mb-20 py-10 md:mr-10 ">
+      <h1 className="font-bold mb-10 text-2xl md:pl-5 md:mx-0 mx-5">Journey</h1>
       <Card
-        cardContents="h-64 md:flex md:flex-row"
-        cardYearDiv="md:w-48 md:my-0 my-5 md:mx-0 mx-5 items-start pl-5"
-        cardYear="pt-1 text-sm text-slate-500"
-        cardTitleDiv="md:w-3/4 pr-10 md:px-0 px-5"
+        cardContents="md:h-64 md:flex md:flex-row flex-col"
+        cardYearDiv="md:order-none order-2 md:w-48 md:my-0 md:my-5 my-4 md:mx-0 mx-5 items-start md:pl-5"
+        cardYear=" pt-1 text-sm text-slate-500"
+        cardTitleDiv="order-none order-1  md:w-3/4 pr-10 md:px-0 px-5"
         cardTitle="font-bold text-lg"
         cardDescription="mt-2 md:mr-14"
         cardUl="md:mt-0 mt-5 md:flex md:flex-row flex flex-wrap md:gap-4 gap-2"

@@ -19,7 +19,7 @@ const Home = () => {
             year: '2020 - Present',
             title: 'Full-stack Software Developer',
             description: 'I led website development for budget-constrained clients, launching real estate sites with 30% more engagement and 20% lower bounce rates. Collaborated on a CSS/HTML CRM demo, built a hub for 400+ users, and managed resources for timely delivery. Used DBeaver/PostgreSQL for data relationships and scripted a Python rental ROI calculator. Managed API queries with ElephantSQL for statistical insights, all while ensuring responsive, scalable websites for improved user experiences.',
-            tools: ['React', 'Flask', 'Django', 'JavaScript', 'Python', 'Git', 'Github', 'Node.js', 'Wix'],
+            tools: ['React', 'Flask', 'Django', 'JavaScript', 'Python', 'Git', 'Github', 'Node.js', 'Wix', 'WordPress'],
         },
         {
             year: '2021 - 2023',
@@ -77,8 +77,8 @@ const Home = () => {
         <div className="dark:text-gray-900 dark:bg-slate-100 text-slate-100  bg-gray-900">
             <Navbar />
             <div className="flex md:flex-row flex-col md:h-[32rem] md:gap-20 ">
-                <div className="flex justify-center items-center">
-                    <img className="md:h-40 md:w-40 h-20 w-20 rounded-lg md:-rotate-6 rotate-0" src={images.headshot} alt="headshot" />
+                <div className="flex md:justify-center md:pl-0 pl-5 items-center">
+                    <img className="md:h-40 md:w-40 h-20 w-20 rounded-lg md:-rotate-6 rotate-0 grayscale" src={images.headshot} alt="headshot" />
                 </div>
                 <div className="md:ml-5 md:p-0 p-5  flex flex-col justify-center items-start">
                     <HeadingOne
@@ -141,7 +141,7 @@ const Home = () => {
                             "Beyond the computer, I have guided fellow soccer coaches, emphasizing the sport's skill development aspect. My family and I explored new places and supported each other off the field. Balancing professional and personal passions embodied my holistic approach to life—always seeking growth, learning, and sharing meaningful experiences.",
                         ]}
                     />
-                    <img className=" object-contain md:h-80 md:w-80 h-40 w-40 md:transform md:scale-x-[-1] " src={images.headshotTwo} alt="headshot" />
+                    <img className=" object-contain md:h-80 md:w-80 h-40 w-40 md:transform md:scale-x-[-1] invert dark:invert-0" src={images.headshotTwo} alt="headshot" />
                 </div>
             </div>
             <div className="h-auto">

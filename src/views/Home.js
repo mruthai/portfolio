@@ -109,14 +109,14 @@ const Home = () => {
                         imageUrl={card.imageUrl}
                         projectContainer="md:h-44 md:ml-5 flex md:flex-row flex-col items-center md:gap-16 gap-12 "
                         projectMiniContainerOne="flex md:flex-row flex-col md:m-4"
-                        projectMiniContainerTwo="p-3 transition-all ease-in duration-300 hover:bg-gray-800 dark:hover:bg-slate-50 rounded-lg"
+                        projectMiniContainerTwo="p-3 transition-all ease-in duration-300 hover:bg-gray-800 dark:hover:bg-slate-50 shadow-xl rounded-lg"
                         projectImageCss=" md:order-none order-3  md:w-72 md:h-40 w-42 h-40 rounded-md border-2 dark:border-slate-300 border-slate-700"
                         projectTitle=" md:order-none order-1 text-lg font-bold"
                         projectDescription=" max-w-2xl md:order-none order-2"
                         projectUl="md:mt-0 mt-5 md:flex md:flex-row flex flex-wrap md:gap-4 gap-2"
                         projectToolCss="md:my-3 md:mt-0 mt-2 md:mb-0 mb-2 text-sm rounded-xl bg-gray-200 px-3 py-1 text-slate-500 "
                         projectTools={card.projectTools}
-                        projectLink="text-slate-500"
+                        projectLink="text-slate-500 hover:text-purple-400"
                         projectUrl={card.projectUrl}
 
                     />

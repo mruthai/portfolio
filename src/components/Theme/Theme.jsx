@@ -21,15 +21,15 @@ const Theme = () => {
   };
 
   return (
-    <div className="flex items-center">
+    <div className="flex items-center bg-pink-400 rounded-xl h-7 w-10">
       {darkMode ? (
         <FaSun
-          className="text-yellow-500 text-2xl cursor-pointer"
+          className="text-yellow-500 text-xl cursor-pointer"
           onClick={toggleTheme}
         />
       ) : (
         <FaMoon
-          className="text-yellow-500 text-2xl cursor-pointer"
+          className="text-yellow-500 text-xl cursor-pointer"
           onClick={toggleTheme}
         />
       )}

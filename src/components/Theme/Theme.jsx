@@ -1,10 +1,10 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
+
 import { FaSun, FaMoon } from 'react-icons/fa';
 
 const Theme = () => {
   const [darkMode, setDarkMode] = useState(false)
-
 
   // className dark to change background color
   useEffect(() => {
@@ -16,24 +16,26 @@ const Theme = () => {
   }, [darkMode])
   const toggleTheme = () => {
     setDarkMode(!darkMode);
-    // You can add logic to change the theme here, e.g., by adding classes to your HTML root element.
-    // document.documentElement.classList.toggle('dark'); // Add a 'dark' class to enable dark mode
   };
 
+
+
   return (
-    <div className="flex items-center bg-pink-400 rounded-xl h-7 w-10">
-      {darkMode ? (
-        <FaSun
-          className="text-yellow-500 text-xl cursor-pointer"
-          onClick={toggleTheme}
-        />
-      ) : (
-        <FaMoon
-          className="text-yellow-500 text-xl cursor-pointer"
-          onClick={toggleTheme}
-        />
-      )}
-    </div>
+    <>
+      <div className="relative inline-flex items-center dark:bg-gray-500 bg-slate-50 rounded-xl cursor-pointer h-7 w-10">
+        {darkMode ? (
+          <FaSun
+            className="text-slate-50 text-lg cursor-pointer absolute left-1"
+            onClick={toggleTheme}
+          />
+        ) : (
+          <FaMoon
+            className="text-gray-500 text-lg cursor-pointer absolute right-0 mr-1 "
+            onClick={toggleTheme}
+          />
+        )}
+      </div>
+    </>
   );
 };
 

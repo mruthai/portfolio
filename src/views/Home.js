@@ -16,6 +16,13 @@ const Home = () => {
 
     const experienceData = [
         {
+            year: 'Oct. 2023 - Dec. 2023',
+            title: 'Frontend Developer • Co.Lab',
+            description: 'As the sole frontend developer on an 8-week AGILE team, I successfully spearheaded the development of a streamlined MVP, empowering job applicants with a personalized cover letter solution. ',
+            tools: ['React', 'Typescript', 'Vite', 'Tailwindcss', 'Trello'],
+        },
+
+        {
             year: '2020 - Present',
             title: 'Full-stack Software Developer',
             description: 'I led website development for budget-constrained clients, launching real estate sites with 30% more engagement and 20% lower bounce rates. Collaborated on a CSS/HTML CRM demo, built a hub for 400+ users, and managed resources for timely delivery. Used DBeaver/PostgreSQL for data relationships and scripted a Python rental ROI calculator. Managed API queries with ElephantSQL for statistical insights, all while ensuring responsive, scalable websites for improved user experiences.',
@@ -39,20 +46,14 @@ const Home = () => {
             description: 'I spearheaded, developed, and executed the establishment of a cutting-edge maker-space. My primary emphasis was on redesigning learning spaces, fostering creativity, innovation, and hands-on learning experiences for students and enthusiasts alike.',
             tools: ['XYZ 3D Printing', 'Design Thinking', 'Leadership'],
         },
-        {
-            year: '2012 - 2017',
-            title: 'Learning Innovation Coach • Shekou International School',
-            description: 'I took the lead in developing and implementing a transformative student-directed learning program spanning K-12, culminating in the creation of the "AMPed Guidebook." Furthermore, I fostered a culture of knowledge sharing among staff via Twitter, generating a remarkable 14 million impressions through #sisrocks, which directly contributed to a 200% surge in international teacher recruitment. Additionally, I co-authored a groundbreaking book, "Transform," that disseminates cutting-edge teaching and learning practices, further contributing to educational advancement and innovation.',
-            tools: ['Apple Suite', 'WordPress', 'MakerBot 3D Printing'],
-        },
     ];
     const projectData = [
         {
-            title: 'Decision Harvest',
-            description: 'Built a full-stack decision app for farmers using React, integrated real-time stock data, managed user info in Firestore, and deployed the application using Netlify.',
-            imageUrl: `${images.decisionHarvest}`,
-            projectTools: ['React', 'JavaScript', 'Firebase', 'Netlify'],
-            projectUrl: 'https://decision-harvest.netlify.app/'
+            title: 'AI-Personalized Cover Letter',
+            description: 'As the sole frontend developer on an 8-week AGILE team, I successfully spearheaded the development of a streamlined MVP, empowering job applicants with a personalized cover letter solution.',
+            imageUrl: `${images.yeonjii}`,
+            projectTools: ['React', 'Typescript', 'Vite', 'Tailwindcss', 'Netlify'],
+            projectUrl: 'https://yeonjii.netlify.app/'
         },
         {
             title: 'Football Club',
@@ -62,11 +63,11 @@ const Home = () => {
             projectUrl: 'https://osusc.netlify.app/'
         },
         {
-            title: 'Sustainable Fishing',
-            description: 'I built an app for users to learn more about the seafood profiles of each species. The app allows users to collect fish cards to store on their profile and understand more about sustainable fishing.',
-            imageUrl: `${images.fishing}`,
-            projectTools: ['Flask', 'Python', 'Glitch', 'PostgreSQL', 'ElephantSQL'],
-            projectUrl: 'https://spangle-field-atlasaurus.glitch.me/'
+            title: 'Decision Harvest',
+            description: 'Built a full-stack decision app for farmers using React, integrated real-time stock data, managed user info in Firestore, and deployed the application using Netlify.',
+            imageUrl: `${images.decisionHarvest}`,
+            projectTools: ['React', 'JavaScript', 'Firebase', 'Netlify'],
+            projectUrl: 'https://decision-harvest.netlify.app/'
         },
     ];
 
@@ -112,9 +113,9 @@ const Home = () => {
                         projectMiniContainerTwo="p-3 transition-all ease-in duration-300 hover:bg-gray-800 dark:hover:bg-slate-50 shadow-xl rounded-lg"
                         projectImageCss=" md:order-none order-3  md:w-72 md:h-40 w-42 h-40 rounded-md border-2 dark:border-slate-300 border-slate-700"
                         projectTitle=" md:order-none order-1 text-lg font-bold"
-                        projectDescription=" max-w-2xl md:order-none order-2"
-                        projectUl="md:mt-0 mt-5 md:flex md:flex-row flex flex-wrap md:gap-4 gap-2"
-                        projectToolCss="md:my-3 md:mt-0 mt-2 md:mb-0 mb-2 text-sm rounded-xl bg-gray-200 px-3 py-1 text-slate-500 "
+                        projectDescription=" max-w-2xl md:order-none order-2 mb-3"
+                        projectUl=" md:flex md:flex-row flex flex-wrap md:gap-4 gap-2 my-3"
+                        projectToolCss="md:my-3 md:mt-0 mt-2 md:mb-0 mb-2 text-sm rounded-xl bg-gray-200 px-3 py-1 text-slate-500 hover:bg-gray-300 hover:text-slate-900"
                         projectTools={card.projectTools}
                         projectLink="text-slate-500 hover:text-purple-400"
                         projectUrl={card.projectUrl}

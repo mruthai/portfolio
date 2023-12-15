@@ -3,7 +3,7 @@ import headshotTwo from '../assets/headshotTwo.svg';
 import headshotOne from '../assets/headShotW.svg';
 import soccerClub from '../assets/soccerClub.png';
 import decisionHarvest from '../assets/decisionHarvest.png';
-import fishing from '../assets/fishing.png';
+import yeonjii from '../assets/yeonjii.png';
 
 const defaultExport = {
     headshot,
@@ -11,7 +11,7 @@ const defaultExport = {
     headshotOne,
     soccerClub,
     decisionHarvest,
-    fishing,
+    yeonjii,
 
 };
 

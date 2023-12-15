@@ -18,7 +18,7 @@ const Home = () => {
         {
             year: 'Oct. 2023 - Dec. 2023',
             title: 'Frontend Developer • Co.Lab',
-            description: 'As the sole frontend developer on an 8-week AGILE team, I successfully spearheaded the development of a streamlined MVP, empowering job applicants with a personalized cover letter solution. ',
+            description: "During an 8-week AGILE program, I successfully provided technical specifications and actively engaged in the agile development process. I took the lead in spearheading frontend development, refining the product designer's iteration to elevate the user interface and experience. Additionally, I co-orchestrated the entire development life cycle, overseeing planning, execution, and testing to ensure the seamless delivery of high-quality software solutions, showcasing effective prioritization and adaptability in response to evolving project requirements.",
             tools: ['React', 'Typescript', 'Vite', 'Tailwindcss', 'Trello'],
         },
 

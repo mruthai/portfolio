@@ -79,7 +79,7 @@ const Home = () => {
             <Navbar />
             <div className="flex md:flex-row flex-col md:h-[32rem] md:gap-20 ">
                 <div className="flex md:justify-center md:pl-0 pl-5 items-center">
-                    <img className="md:h-40 md:w-40 h-20 w-20 rounded-lg md:-rotate-6 rotate-0 grayscale" src={images.headshot} alt="headshot" />
+                    <img className="md:w-40  w-20 rounded-lg md:-rotate-6 rotate-0 grayscale" src={images.headshot} alt="headshot" />
                 </div>
                 <div className="md:ml-5 md:p-0 p-5  flex flex-col justify-center items-start">
                     <HeadingOne
